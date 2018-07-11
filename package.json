@@ -1,0 +1,53 @@
+{
+  "name": "koa2-typescript-boilerplate",
+  "version": "0.1.0",
+  "description": "Koa2 TypeScript boilerplate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kamil-p/koa2-typescript-boilerplate.git"
+  },
+  "author": "Kamil Purzynski",
+  "license": "MIT License",
+  "scripts": {
+    "start": "npm run serve",
+    "build": "npm run build-ts",
+    "serve": "node dist/server.js",
+    "watch-node": "nodemon dist/server.js",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"Sass,TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-sass\" \"npm run watch-ts\" \"npm run watch-node\"",
+    "test": "jest --forceExit --coverage --verbose",
+    "watch-test": "npm run test -- --watchAll",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "copy-static-assets": "ts-node copyStaticAssets.ts",
+    "debug": "npm run build && npm run watch-debug",
+    "serve-debug": "nodemon --inspect dist/server.js",
+    "watch-debug": "concurrently -k -p \"[{name}]\" -n \"Sass,TypeScript,Node\" -c \"yellow.bold,cyan.bold,green.bold\" \"npm run watch-sass\" \"npm run watch-ts\" \"npm run serve-debug\""
+  },
+  "dependencies": {
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "koa2-cors": "^2.0.5",
+    "koa-convert": "^1.2.0",
+    "koa-logger": "^3.2.0",
+    "async": "^2.6.1",
+    "bcrypt-nodejs": "^0.0.3",
+    "bluebird": "^3.5.1",
+    "lodash": "^4.17.10"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.46",
+    "@types/koa-router": "^7.0.23",
+    "@types/koa-bodyparser": "^5.0.1",
+    "@types/koa-compose": "^3.2.2",
+    "@types/node": "^10.5.2",
+    "@types/async": "^2.0.45",
+    "@types/bcrypt-nodejs": "^0.0.30",
+    "@types/bluebird": "^3.5.20",
+    "@types/lodash": "^4.14.91",
+    "nodemon": "^1.13.0",
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.2"
+  }
+}
