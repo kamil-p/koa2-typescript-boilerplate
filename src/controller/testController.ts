@@ -5,7 +5,7 @@ export async function get(ctx: Koa.Context, next: Function): Promise<void> {
         results: [
             {
                 title: "Hello World",
-                content: "Welcome in a new world"
+                content: "Welcome in a new world greg"
             }
         ],
         count: 1

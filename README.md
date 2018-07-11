@@ -18,7 +18,7 @@ git clone https://github.com/kamil-p/koa2-typescript-boilerplate.git <project_na
 - Install dependencies
 ```
 cd <project_name>
-yarn install
+npm install
 ```
 - Build and run the project
 ```
@@ -39,7 +39,7 @@ The full folder structure of this app is explained below:
 | **node_modules**         | Contains all your npm dependencies                                                            |
 | **src**                  | Contains your source code that will be compiled to the dist dir                               |
 | **src/controller**       | Controllers define functions that respond to various http requests                            |
-| **src/module**           | For now it contain only routing  |
+| **src/module**           | Contain routing and mongo db integration  |
 | **src**/app.ts           | Entry point to your express app                                                               |
 | package.json             | File that contains npm dependencies as well as [build scripts](#what-if-a-library-isnt-on-definitelytyped)                          |
 | tsconfig.json            | Config settings for compiling server code written in TypeScript                               |
